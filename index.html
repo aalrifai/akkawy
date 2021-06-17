@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akkawy</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="author" content="tomyo">
+  <meta name="description" content="Akkawy: The best hummus in Berlin.">
+  
+  <!-- favicon stuff -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="whitesmoke">
+  <!-- End of favicon stuff -->
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" defer />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" defer />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" defer></script>
+  <script type="text/javascript" src="index.js" defer></script>
+  <script src="https://use.fontawesome.com/e72c7bffbf.js" async></script>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+  <main>
+    <section id="home">
+      <img src="logo.png" />
+      <h1><a href="https://www.akkawy.com">AKKAWY</a></h1>
+      <a class="contact-link button" href="#products">
+        MENU
+      </a>
+      <a class="contact-link button" href="#contact">
+        CONTACT
+      </a>
+    </section>
+    <hr />
+
+    <section id="products">
+      <h3>⭐️ HUMMUS ⭐️</h3>
+      <p>Our starring start</p>
+      <div class="slider slider-for">
+        <img src="img/hummus_01.jpg" />
+        <img src="img/hummus_02.jpg" />
+        <img src="img/hummus_03.jpg" />
+        <img src="img/hummus_04.jpg" />
+        <img src="img/hummus_05.jpg" />
+        <img src="img/hummus_06.jpg" />
+        <img src="img/hummus_07.jpg" />
+        <img src="img/hummus_08.jpg" />
+      </div>
+      <div class="slider slider-nav">
+        <img src="img/hummus_01.jpg" />
+        <img src="img/hummus_02.jpg" />
+        <img src="img/hummus_03.jpg" />
+        <img src="img/hummus_04.jpg" />
+        <img src="img/hummus_05.jpg" />
+        <img src="img/hummus_06.jpg" />
+        <img src="img/hummus_07.jpg" />
+        <img src="img/hummus_08.jpg" />
+      </div>
+      <div class="details">
+        <div>
+          <!-- <h4>I want</h4> -->
+          <!-- <h7>&nbsp</h7> -->
+          <hr />
+          <img src="img/showcase_01.jpg" />
+          <!-- <p>
+            Enjoy feast
+          </p> -->
+        </div>
+        <div>
+          <h3>Salads</h3>
+          <div class="papa-details">
+            <div>
+              <h7>Beetroot</h7>
+              <hr />
+              <img src="img/salad_01.jpg" />
+              <p>
+                <!-- Very tasty, many magic ingredients -->
+              </p>
+            </div>
+            <div>
+              <h7>Fattoush</h7>
+              <hr />
+              <img src="img/salad_02.jpg" />
+              <p>
+                <!-- Special crispy salad -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="show-on-target" id="contact">
+      <h3>CONTACT US</h3>
+      <form action="https://formspree.io/f/mrgrkokj" method="POST">
+        <input type="hidden" name="_next" value="https://www.akkawy.com#thanks" />
+        <input type="hidden" name="_subject" value="Web inquiry on Akkawy!" />
+        <input type="hidden" name="_cc" value="tomas@ha-team.co" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <input name="name" type="text" placeholder="Name" required />
+        <input type="email" name="_replyto" placeholder="Email" required >
+        <input name="phone" type="phone" placeholder="Phone number (optional)" />
+        <textarea name="inquiry" rows="6" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <section id="show-contact-form-button" class="js-hide-on-target" data-target="#contact">
+      <a class="contact-link button js-fast-scroll" href="#contact">
+        CONTACT US
+      </a>
+    </section>
+    <section class="show-on-target" id="thanks">
+      <h3>¡Thanks for reaching out to us!</h3>
+      <p>
+        We'll be back to you soon.
+      </p>
+    </section>
+  </main>
+
+  <hr />
+  <footer>
+    <a href="mailto:info@akkawy.com">info@akkawy.com</a>
+    ·
+    <a href="tel:+493027598000">+493027598000</a>
+    ·
+    <p>Kopernikusstraße 8, 10245 Berlin.</p>
+    ·
+    <div class="social">
+      <a href="https://g.page/akkawy" target="_blank">
+        <i class="fa fa-map fa-2x" aria-hidden="true"></i>
+      </a>
+      <a class="unstyled" href="https://www.facebook.com/profile.php?id=100040111821909" target="_blank">
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+      </a>
+      <a class="unstyled" href="https://www.instagram.com/akkawyjj/" target="_blank">
+        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
