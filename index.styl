@@ -1,145 +1,138 @@
-first-color = #835d1a  // brownish
-header-background-color = first-color
-background-color = whitesmoke  // Light yellow
-ruler-color = #F6C122 // Orange
-header-height = 0  // 10vmin
-first-font-family = Arial
-second-font-family = Adam
+$first-color = #835d1a  // brownish
+$bg-color = whitesmoke  // Light yellow
+$bg-color2 =$first-color // #0c8c04a1
+$ruler-color = $first-color //#F6C122 // Orange
+$first-font-family = Adam//Arial
+
 @font-face
   font-family: Adam
   src: url("ADAM.CG.PRO.otf")
 
-a, p, h1, h2, h3, h4, h5, h6, img, hr
-  margin-bottom: 0
-a
-  text-decoration: none
-  color: inherit
-input, textarea, button, div
-  &:focus
-    outline: none
-    // border: 0.1em beige solid
-input, textarea, button, a.button
-  border: none
-  font-size: inherit
-  font-family: first-font-family
-  color: inherit
+// utiity css
+
+.w-full
+  width: 100%
+
+.mt-1
   margin-top: 1em
-  padding: 1em
-  border-radius: 1em
-  placeholder-color(first-color)
-button, a.button
-  cursor: pointer
-  color: white
-  background-color: first-color
-form
-  display: inherit
-  flex-flow: inherit
-  align-items: inherit
-  justify-content: inherit
 
-// Helpers
-placeholder-color(n)
-  &::-webkit-input-placeholder
-    color: n
-  &::-moz-placeholder
-    color: n
-    opacity:  1
-  &:-moz-placeholder
-    color: n
-    opacity:  1
-  &:-ms-input-placeholder
-    color: n
-placeholder-font-weight(n)
-  &::-webkit-input-placeholder
-    font-weight: n
-  &::-moz-placeholder
-    font-weight: n
-  &:-moz-placeholder
-    font-weight: n
-  &:-ms-input-placeholder
-    font-weight: n
-responsive()
-  width: auto
-  max-width: 100vw
-  max-height: 100vh
-  margin: 0 auto
 
-divide(a, b)
-  a/b
-horizontalMargin()
-  margin-left: 2em
-  margin-right: 2em
+.mt-2
+  margin-top: 2em
+
+.mb-1
+  margin-bottom: 1em
+
+.mb-2
+  margin-bottom: 2em
+
+// end utility css
+
 
 html
-  background-color: background-color
-  font-family: first-font-family
+  background-color: $bg-color
+  font-family: $first-font-family
   font-size: 4vmin
-  color: first-color
+  color: $first-color
   @media screen and (min-width:769px)
-    font-size: 3vmin
+    font-size: 18px
 
 body
   display: flex
   flex-flow: column nowrap
   justify-content: space-between
   margin: 0
-  @media screen and (min-width:769px)
-    margin: 0 5em
-  @media screen and (min-width:1025px)
-    margin: 0 8em
+  // @media screen and (min-width:769px)
+  //   margin: 0 5em
+  // @media screen and (min-width:1025px)
+  //   margin: 0 8em
 
 main
-  margin-top: header-height
 
-section
-  display: flex
-  flex-flow: column nowrap
-  // align-items: center
-  text-align: center
-  font-family: second-font-family
-  color: first-color
-  margin-top: 2em
-  &#home
-    img
-      responsive()
-      @media screen and (min-width:769px)
-        max-height: 72vh
-    margin-top: 1em
-  &#products
-    hr
-      border-width: 0.1em
-      width: 50%
-      margin-top: 0.5em
-    .slider-for
-      max-width: 100vmin
-      margin-left: auto
-      margin-right: auto
-    .slider-nav
-      .draggable
-        cursor: pointer!important
-    .slider
-      margin-top: 2em
-    .details
-      horizontalMargin()
-      &>div
-        margin-top: 2em
-      p
-        font-family: Arial
+  section
+    // background-color: $bg-color
+    display: flex
+    flex-flow: column nowrap
+    // align-items: center
+    text-align: center
+    font-family: $second-font-family
+    color: $first-color
+    
+    &#home
+      color: $bg-color
+      height: 100vh
+      background-image: url('img/showcase-xs.jpg')
+      background-repeat: no-repeat
+      background-attachment: fixed
+      background-size: cover
+
+      margin: 0
+      @media (orientation: landscape) {
+        background-image: url('img/showcase-sm.jpg')
+      } 
+
+      h1 
+        // margin: 3em auto
+        text-shadow: 0 0 3px #61c42b,-1px -1px #0fc107,1px 1px #86df12
+        font-size: 2em
+        margin: 1em
+
+
+      > a
+        padding-top: 0.6em // Fix font vertical align
+        background-color: $bg-color2
+      
       img
-        responsive()
-        width: 15em
-        margin-top: 1em
-  &#contact
-    horizontalMargin()
+        margin: 2em auto
+        width: auto
+        max-width: calc(min(60vw, 250px))
+        @media screen and (min-width:769px)
+          max-height: 72vh
 
-.contact-link
-  align-self: center
-.show-on-target:not(:target) *
-  display: none
-.show-on-target:target
-  display: flex
-.hide-on-target:target
-  display: none
+      .buttons
+        display: flex
+        flex-flow: column nowrap
+        gap: 0.5em
+
+      
+    &#products
+      hr
+        border-width: 0.1em
+        width: 50%
+        margin-top: 0.5em
+
+      .slider-for
+        max-width: 100vmin
+        margin-left: auto
+        margin-right: auto
+
+      .slider-nav
+        .draggable
+          cursor: pointer!important
+
+      .slider
+        margin-top: 2em
+
+        img 
+          margin-top: 1em
+
+      .details
+
+        &>div
+          margin-top: 2em
+
+        p
+          font-family: Arial
+
+        img
+          responsive()
+          margin-top: 1em
+
+    &#contact
+      margin: 0 2em
+
+    &#show-contact-form-button
+      margin-top: 1em
 
 
 .slick-initialized
@@ -163,7 +156,7 @@ section
 
 hr
   width: 80%
-  border: 0.2em solid ruler-color
+  border: 0.1em solid $ruler-color
   margin-top: 2em
 
 footer
@@ -172,10 +165,96 @@ footer
   gap: 0.1em
   margin-top: 1em
   text-align: center
-  color: first-color
+  color: $first-color
   p
     line-height: 1.5em
     margin: 0
 
   i
     margin: 0.5em
+
+
+
+a, p, h1, h2, h3, h4, h5, h6, img, hr
+  margin-bottom: 0
+a
+  text-decoration: none
+  color: inherit
+
+input, textarea, button, div
+  &:focus
+    outline: none
+    // border: 0.1em beige solid
+
+input, textarea, button, a.button
+  border: none
+  font-size: inherit
+  font-family: $first-font-family
+  color: inherit
+  margin-top: 1em
+  padding: 0.5em
+  border-radius: 1em
+  placeholder-color($first-color)
+
+button, a.button
+  cursor: pointer
+  color: white
+  background-color: $first-color
+
+
+.contact-link
+  align-self: center
+.show-on-target:not(:target) *
+  display: none
+.show-on-target:target
+  display: flex
+.hide-on-target:target
+  display: none
+
+
+form
+  display: inherit
+  flex-flow: inherit
+  align-items: inherit
+  justify-content: inherit
+
+// Helpers
+placeholder-color(n)
+  &::-webkit-input-placeholder
+    color: n
+  &::-moz-placeholder
+    color: n
+    opacity:  1
+  &:-moz-placeholder
+    color: n
+    opacity:  1
+  &:-ms-input-placeholder
+    color: n
+
+placeholder-font-weight(n)
+  &::-webkit-input-placeholder
+    font-weight: n
+  &::-moz-placeholder
+    font-weight: n
+  &:-moz-placeholder
+    font-weight: n
+  &:-ms-input-placeholder
+    font-weight: n
+
+responsive()
+  width: auto
+  max-width: 100vw
+  max-height: 100vh
+  margin: 0 auto
+
+divide(a, b)
+  a/b
+
+
+// Slider fix
+.slick-initialized .slick-slide
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  img
+    width: 100%

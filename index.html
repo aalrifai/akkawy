@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="author" content="tomyo">
   <meta name="description" content="Akkawy: The best hummus in Berlin.">
-  
+
   <!-- favicon stuff -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -44,45 +44,102 @@
   <main>
     <section id="home">
       <img src="logo.png" />
-      <h1><a href="https://www.akkawy.com">AKKAWY</a></h1>
-      <a class="contact-link button" href="#products">
-        MENU
-      </a>
-      <a class="contact-link button" href="#contact">
-        CONTACT
-      </a>
+      <h1>
+        <a href="https://www.akkawy.com">AKKAWY</a>
+      </h1>
+      <div class="buttons">
+        <a class="contact-link button" href="#products">
+          MENU
+        </a>
+        <a class="contact-link button pt-3/2" href="#contact">
+          CONTACT
+        </a>
+      </div>
     </section>
     <hr />
 
     <section id="products">
       <h3>⭐️ HUMMUS ⭐️</h3>
-      <p>Our starring start</p>
       <div class="slider slider-for">
-        <img src="img/hummus_01.jpg" />
-        <img src="img/hummus_02.jpg" />
-        <img src="img/hummus_03.jpg" />
-        <img src="img/hummus_04.jpg" />
-        <img src="img/hummus_05.jpg" />
-        <img src="img/hummus_06.jpg" />
-        <img src="img/hummus_07.jpg" />
-        <img src="img/hummus_08.jpg" />
+        <div>
+          <h7>Classic</h7>
+          <hr />
+          <img src="img/hummus-01.jpg" />
+        </div>
+        <div>
+          <h7>Beetroot</h7>
+          <hr />
+          <img src="img/hummus-02.jpg" />
+        </div>
+        <div>
+          <h7>Shakshuka</h7>
+          <hr />
+          <img src="img/hummus-03.jpg" />
+        </div>
+        <div>
+          <h7>Masabaha</h7>
+          <hr />
+          <img src="img/hummus-04.jpg" />
+        </div>
+        <div>
+          <h7>Eggplant</h7>
+          <hr />
+          <img src="img/hummus-05.jpg" />
+        </div>
+        <div>
+          <h7>Mushrooms</h7>
+          <hr />
+          <img src="img/hummus-06.jpg" />
+        </div>
+        <div>
+          <h7>Foul</h7>
+          <hr />
+          <img src="img/hummus-08.jpg" />
+        </div>
       </div>
       <div class="slider slider-nav">
-        <img src="img/hummus_01.jpg" />
-        <img src="img/hummus_02.jpg" />
-        <img src="img/hummus_03.jpg" />
-        <img src="img/hummus_04.jpg" />
-        <img src="img/hummus_05.jpg" />
-        <img src="img/hummus_06.jpg" />
-        <img src="img/hummus_07.jpg" />
-        <img src="img/hummus_08.jpg" />
+        <div>
+          <small>Classic</small>
+          <hr />
+          <img src="img/hummus-01.jpg" />
+        </div>
+        <div>
+          <small>Beetroot</small>
+          <hr />
+          <img src="img/hummus-02.jpg" />
+        </div>
+        <div>
+          <small>Shakshuka</small>
+          <hr />
+          <img src="img/hummus-03.jpg" />
+        </div>
+        <div>
+          <small>Masabaha</small>
+          <hr />
+          <img src="img/hummus-04.jpg" />
+        </div>
+        <div>
+          <small>Eggplant</small>
+          <hr />
+          <img src="img/hummus-05.jpg" />
+        </div>
+        <div>
+          <small>Mushrooms</small>
+          <hr />
+          <img src="img/hummus-06.jpg" />
+        </div>
+        <div>
+          <small>Foul</small>
+          <hr />
+          <img src="img/hummus-08.jpg" />
+        </div>
       </div>
       <div class="details">
         <div>
           <!-- <h4>I want</h4> -->
           <!-- <h7>&nbsp</h7> -->
-          <hr />
-          <img src="img/showcase_01.jpg" />
+          <!-- <hr /> -->
+          
           <!-- <p>
             Enjoy feast
           </p> -->
@@ -93,7 +150,7 @@
             <div>
               <h7>Beetroot</h7>
               <hr />
-              <img src="img/salad_01.jpg" />
+              <img src="img/salad-01.jpg" />
               <p>
                 <!-- Very tasty, many magic ingredients -->
               </p>
@@ -101,7 +158,7 @@
             <div>
               <h7>Fattoush</h7>
               <hr />
-              <img src="img/salad_02.jpg" />
+              <img src="img/salad-02.jpg" />
               <p>
                 <!-- Special crispy salad -->
               </p>
@@ -119,7 +176,7 @@
         <input type="hidden" name="_cc" value="tomas@ha-team.co" />
         <input type="text" name="_gotcha" style="display:none" />
         <input name="name" type="text" placeholder="Name" required />
-        <input type="email" name="_replyto" placeholder="Email" required >
+        <input type="email" name="_replyto" placeholder="Email" required>
         <input name="phone" type="phone" placeholder="Phone number (optional)" />
         <textarea name="inquiry" rows="6" placeholder="How can we help you?" required></textarea>
         <button type="submit">Send</button>
@@ -137,8 +194,8 @@
       </p>
     </section>
   </main>
-
-  <hr />
+  
+  <img class="w-full mt-2 mb-1" src="img/showcase-sm.jpg" />
   <footer>
     <a href="mailto:info@akkawy.com">info@akkawy.com</a>
     ·
