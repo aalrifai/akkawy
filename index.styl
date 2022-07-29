@@ -32,7 +32,7 @@ $first-font-family = Adam//Arial
 html
   background-color: $bg-color
   font-family: $first-font-family
-  font-size: 4vmin
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)))
   color: $first-color
   @media screen and (min-width:769px)
     font-size: 18px
